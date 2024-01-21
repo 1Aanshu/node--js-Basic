@@ -22,7 +22,7 @@ console.log({ result, resultsub, resultsum });
 
 const myModule1 = require("./timelibrary");
 
-const result1 = myModule1.getTime();
+const result1 = myModule1.myModule1;
 
 // Create another library that converts Fahreheit temp to celcius
 
