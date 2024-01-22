@@ -1,4 +1,4 @@
-const getTime = (updatedTime,currentTime) => {
+const getTime = (updatedTime) => {
   const time = new Date();
   const Day = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
   const watchDay = Day[time.getDay()];
@@ -30,8 +30,7 @@ const getTime = (updatedTime,currentTime) => {
     " ",
     watchTime
   );
-  updatedTime =currentTime;
-  console.log(updatedTime);
+  updatedTime = currentTime;
 };
 
 setInterval(() => {

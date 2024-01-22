@@ -39,4 +39,4 @@ console.log(result1);
 
 // bcrypt.js
 
-// use the above package to convert the string to hash 
+// use the above package to convert the string to hash */*
