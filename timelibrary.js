@@ -1,4 +1,4 @@
-const getTime = (updatedTime) => {
+const getTime = () => {
   const time = new Date();
   const Day = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
   const watchDay = Day[time.getDay()];
@@ -20,7 +20,7 @@ const getTime = (updatedTime) => {
   const watchMonth = Month[time.getMonth()];
   const Year = time.getFullYear();
   const watchTime = time.toLocaleTimeString();
-  const currentTime = String(watchDay).concat(
+  return String(watchDay).concat(
     " ",
     watchDate,
     " ",
@@ -30,11 +30,6 @@ const getTime = (updatedTime) => {
     " ",
     watchTime
   );
-  updatedTime = currentTime;
 };
 
-setInterval(() => {
-  getTime();
-}, 1000);
-
-module.exports = updatedTime;
+module.exports = { getTime };
