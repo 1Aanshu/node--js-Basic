@@ -6,26 +6,34 @@
 // run the code
 
 const nodemailer = require("nodemailer");
-
+const dotenv = require("dotenv");
+dotenv.config();
 const transporter = nodemailer.createTransport({
   service: "gmail",
+  port: 587,
+  secure: false,
   auth: {
     user: "aanshu2dwiwedi@gmail.com",
-    pass: "hggx dysy qnur xcwb",
+    pass: process.env.pass,
   },
 });
 
-const mailOptions = {
-  from: "aanshu2dwiwedi@gmail.com",
-  to: "dwiwediukmsag@gmail.com",
-  subject: "Nodemailer",
-  text: "Learn about Nodemailer!",
+const sendMail = async ({ from, to, subject, html, attachments }) => {
+  const message = {
+    from,
+    to,
+    subject,
+    text: "Learn about Nodemailer!",
+    html,
+    attachments,
+  };
+
+  const result = await transporter.sendMail(message);
+  return result.messageId;
 };
 
-transporter.sendMail(mailOptions, function (error, info) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Email sent: " + info.response);
-  }
-});
+module.exports = { sendMail };
+
+//attachment
+
+// env variable (dotenv package)
