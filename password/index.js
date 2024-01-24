@@ -28,4 +28,4 @@ const mailFunction = async (message) => {
   console.log(result);
 };
 
-mailFunction(message);
+// mailFunction(message);
