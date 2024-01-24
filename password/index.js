@@ -5,6 +5,8 @@ const result = comparePw("Aanshu", hashedPw);
 
 console.log({ result });
 
+require("dotenv").config();
+
 const mailer = require("./nodemailer");
 
 const message = {
