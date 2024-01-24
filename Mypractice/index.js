@@ -30,3 +30,13 @@ const minMax = async () => {
   console.log(result);
 };
 minMax();
+
+// Write a program to reverse an array of integer values
+
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const reverseArr = () => {
+  const arrReverse = arr2.reverse();
+  console.log(arrReverse);
+};
+reverseArr();
