@@ -1,6 +1,6 @@
 const CC = require("currency-converter-lt");
 
-let currencyConverter = new CC({});
+const currencyConverter = new CC({});
 currencyConverter
   .from("USD")
   .to("GBP")
